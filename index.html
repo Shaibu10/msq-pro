@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSQ Pro: Quiz Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @media print {
+      /* Hide elements that should not be printed */
+      .no-print {
+        display: none !important;
+      }
+      
+      /* Use visibility to hide everything except the printable area */
+      body * {
+        visibility: hidden;
+      }
+      .printable-content, .printable-content * {
+        visibility: visible;
+      }
+      .printable-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 1.5rem;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fff !important;
+      }
+      
+      /* Generic style resets for printable content */
+      .printable-content, .printable-content * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border-color: #ddd !important;
+      }
+      
+      .printable-content table, 
+      .printable-content th, 
+      .printable-content td {
+        border: 1px solid #ddd !important;
+      }
+      
+      .printable-content thead {
+        background-color: #f2f2f2 !important;
+      }
+
+      .printable-content a {
+        text-decoration: none !important;
+        color: #000 !important;
+      }
+
+      /* Specific fix for the score box on the results page */
+      .print-score-box {
+        border: 1px solid #ddd !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+  <div id="root"></div>
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.2.0",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+      "react/": "https://aistudiocdn.com/react@^19.2.0/",
+      "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5"
+    }
+  }
+  </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

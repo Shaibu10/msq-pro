@@ -1,0 +1,5 @@
+{
+  "name": "MSQ Pro: Quiz Platform",
+  "description": "An advanced web application for creating, managing, and taking multiple-choice quizzes. Features an admin panel for question and user management, and a user dashboard for taking assigned quizzes and viewing printable results.",
+  "requestFramePermissions": []
+}
